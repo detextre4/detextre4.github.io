@@ -1,0 +1,85 @@
+/* works */
+#works {
+  padding-block: 4em;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  #works {overflow: hidden}
+  #works .card::before,
+  #works .card::after {display: none}
+  #works .card {border: 5px solid var(--primary)}
+}
+#works h1 {--c: #000}
+
+#works--container {
+  --width: 24em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--width)), 1fr));
+  gap: 4em;
+}
+
+#works .card {
+  --bg-front: var(--secondary);
+  --bg-back: var(--primary);
+  --rotate: 1;
+  --p: 0;
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  isolation: isolate;
+}
+#works .card--content {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+}
+#works .card--content:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, .6);
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: .5s ease;
+  z-index: -1;
+}
+#works .card:nth-of-type(2n + 1) {--rotate: -1}
+#works .card:only-child {max-width: calc(var(--width) + 10em)}
+#works .card img {
+  --of: fill;
+  object-fit: var(--of);
+  width: 100%;
+  aspect-ratio: 1.45 / 1;
+  z-index: 0;
+}
+#works .card h3 {
+  font-weight: 500;
+  text-transform: capitalize;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: .5s ease;
+}
+#works .card .github,
+#works .card .demo {opacity: 0; transition: .5s ease}
+#works .card .github span {transition: .5s ease}
+
+#works .card .github {transform: translateX(-60%)}
+#works .card .demo {
+  --p: 0 10px;
+  --h: 30px;
+  --bs: 2px 2px 2px 2px rgba(0, 0, 0, .5);
+  transform: translateX(60%);
+}
+
+
+#works .card:hover .card--content:after {transform: scaleY(1)}
+#works .card:hover h3,
+#works .card:hover .demo,
+#works .card:hover .github {opacity: 1; transform: translate(0)}
+
+#works .github:hover {--c: var(--accent) !important}
+
+#works .demo:active {
+  --bs: inset 0 6px 2px 0 rgb(255, 255, 255, .2);
+}

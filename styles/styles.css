@@ -1,0 +1,6 @@
+@import url(variables.css);
+@import url(config.css);
+@import url(custome-classes.css);
+@import url(navbar.css);
+@import url(main/main.css);
+@import url(footer.css);

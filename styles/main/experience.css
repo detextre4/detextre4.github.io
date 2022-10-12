@@ -1,0 +1,6 @@
+/* experience */
+#experience {
+  width: 100vw;
+  height: 80vh;
+  margin-inline: calc(50% - 50vw);
+}

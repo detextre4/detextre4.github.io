@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet"  href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css">
+    <title>Portfolio - Herian Palencia</title>
+  </head>
+
+  <body id="es">
+    <section id="hero">
+      <aside id="header">
+        <img src="images/logos/herian - logo texto.png" alt="logo herian">
+        <a id="traduction" href="index-en.html" class="btn center" title="cambiar idioma">
+          esp<i class="mdi mdi-menu-down"></i>
+        </a>
+      </aside>
+
+      <div class="speech-bubble d_nonemobile">
+        <span style="--c: var(--primary)">Hola!</span>
+      </div>
+
+      <img id="img-hero" src="images/photos/photo_3.jpg" alt="herian (photo)">
+      
+      <div class="container-card">
+        <div class="card divcol not_pseudo" style="--x: 2px; --y: 2px; --rotate: 1; --p: 2em 4em">
+          <h3>Mi Nombre es</h3>
+          <h1>Herian Palencia</h1>
+          <button class="btn alignl tup" style="--fs: 1.2em;">soy desarrollador front-end</button>
+        </div>
+      </div>
+
+
+      <a id="scroll-down" href="#about">
+        <img src="images/scroll.gif" alt="scroll down gif" style="width: 100%">
+      </a>
+    </section>
+
+    <div id="main" class="divcol">
+      <aside id="navbar">
+        <div id="navbar-wrapper">
+          <div class="nav-selector"></div>
+
+          <a href="#about" data-type="about">sobre mi</a>
+          <a href="#tools" data-type="tools">herramientas</a>
+          <a href="#works" data-type="works">trabajos</a>
+          <a href="#contact" data-type="contact">contacto</a>
+        </div>
+      </aside>
+      
+      <section id="about" data-type="about">
+        <div id="about--wrapper" class="center" style="gap: 2em 0">
+          <div class="card" style="--p: 0">
+            <img src="images/photos/photo_1.jpg" alt="herian photo" style="width: 100%">
+          </div>
+
+          <div id="about--content" class="divcol">
+            <h1 class="alignl">sobre mi</h1>
+            <p>
+              Soy desarrollador <b class="bold">Front-end</b>, miembro certificado de 
+              <a class="not_typography bold" href="https://nearhispano.org" target="_blank">Near Hispano</a>, mi superpoder es tomar un
+              diseño (photoshop, figma, illustrator, entre otros) y construirlo en código legible y reutilizable con las mejores
+              practicas, tengo amplios conocimientos de <b class="bold">html, css y js</b>; además de
+              frameworks código abierto como <b class="bold">vue.js o nuxt.js</b>. Me especializo en llevar tu creación a la web de manera responsive, dinámica 
+              y rápida.
+            </p>
+            <p>
+              Mi lengua materna es el español, aunque tengo un nivel intermedio de inglés escrito y un nivel básico de inglés hablado.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="tools" data-type="tools">
+        <section id="container-tools" class="card tcenter">
+          <div class="divcol" style="gap: 2em; width: max-content">
+            <h3 class="tup bold align">transforme sus diseños</h3>
+            <div id="container-design">
+              <a href="https://www.adobe.com/la/products/illustrator/free-trial-download.html" target="_blank" style="--delay: 1s">
+                <img src="images/icons/adobei.svg" alt="Adobe Illustrator icon" title="Adobe Illustrator">
+              </a>
+              <a href="https://www.adobe.com/la/products/photoshop.html" target="_blank" style="--delay: 2s">
+                <img src="images/icons/adobexd.svg" alt="Adobe Xd icon" title="Adobe Xd">
+              </a>
+              <a href="https://helpx.adobe.com/es/xd/get-started.html" target="_blank" style="--delay: 3s">
+                <img src="images/icons/photoshop.svg" alt="Photoshop icon" title="Photoshop">
+              </a>
+              <a href="https://www.figma.com" target="_blank" style="--delay: 4s">
+                <img src="images/icons/figma.svg" alt="Figma icon" title="Figma">
+              </a>
+            </div>
+          </div>
+
+          <div class="separator-line"></div>
+
+          <div class="divcol" style="gap: 2em; width: max-content">
+            <h3 class="tup bold align">a código</h3>
+            <div id="container-code">
+              <a href="https://www.aluracursos.com/blog/html-css-javascript-cuales-son-las-diferencias">
+                <img src="images/icons/base-lang.svg" alt="html, css and js icon" style="--delay: 1s" title="html - css -js">
+              </a>
+              <div class="divrow">
+                <a href="https://vuejs.org" style="--delay: 2s">
+                  <img src="images/icons/vue.svg" alt="Vue icon" title="Vue">
+                </a>
+                <a href="https://nuxtjs.org" style="--delay: 3s">
+                  <img src="images/icons/nuxt.svg" alt="Nuxt icon" title="Nuxt">
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      
+      <section id="works" class="divcol" style="gap: 1em" data-type="works">
+        <h1 class="align tcenter">mi portafolio</h1>
+        <section id="works--container">
+          <div class="card">
+            <div class="card--content divcol center">
+              <h3>EXSWAP</h3>
+              <div class="center" style="gap: 2em">
+                <a href="https://github.com/ExSwap-Labs/EXSWAP-INTERFACE" target="_blank" class="github center" style="gap: 2px">
+                  <iconify-icon icon="mdi:github" style="font-size: 30px"></iconify-icon>
+                  <span>Github</span>
+                </a>
+                <a href="https://www.exswap.xyz/#/" target="_blank" class="demo btn center">en vivo</a>
+              </div>
+            </div>
+            <img src="images/works/exswap.jpg" alt="EXSWAP">
+          </div>
+          
+          <div class="card">
+            <div class="card--content divcol center">
+              <h3>Music Feast</h3>
+              <div class="center" style="gap: 2em">
+                <a href="https://github.com/MusicFeast/front_end" target="_blank" class="github center" style="gap: 2px">
+                  <iconify-icon icon="mdi:github" style="font-size: 30px"></iconify-icon>
+                  <span>Github</span>
+                </a>
+                <a href="https://testnet.musicfeast.io" target="_blank" class="demo btn center">en vivo</a>
+              </div>
+            </div>
+            <img src="images/works/music-feast.jpg" alt="Music Feast">
+          </div>
+          
+          <div class="card">
+            <div class="card--content divcol center">
+              <h3>Econnear</h3>
+              <div class="center" style="gap: 2em">
+                <a href="https://github.com/dvconsultores/econear_front" target="_blank" class="github center" style="gap: 2px">
+                  <iconify-icon icon="mdi:github" style="font-size: 30px"></iconify-icon>
+                  <span>Github</span>
+                </a>
+                <a href="https://econear.in/#/" target="_blank" class="demo btn center">en vivo</a>
+              </div>
+            </div>
+            <img src="images/works/econnear.jpg" alt="Econnear">
+          </div>
+          
+          <div class="card">
+            <div class="card--content divcol center">
+              <h3>W3Music</h3>
+              <div class="center" style="gap: 2em">
+                <a href="https://github.com/dvconsultores/w3music" target="_blank" class="github center" style="gap: 2px">
+                  <iconify-icon icon="mdi:github" style="font-size: 30px"></iconify-icon>
+                  <span>Github</span>
+                </a>
+                <a href="http://157.230.2.213/web3music/#/" target="_blank" class="demo btn center">en vivo</a>
+              </div>
+            </div>
+            <img src="images/works/w3music.jpg" alt="w3music">
+          </div>
+          
+          <div class="card">
+            <div class="card--content divcol center">
+              <h3>Evie</h3>
+              <div class="center" style="gap: 2em">
+                <a href="https://github.com/dvconsultores/evie_front" target="_blank" class="github center" style="gap: 2px">
+                  <iconify-icon icon="mdi:github" style="font-size: 30px"></iconify-icon>
+                  <span>Github</span>
+                </a>
+                <a href="https://www.evie.pro/#/" target="_blank" class="demo btn center">en vivo</a>
+              </div>
+            </div>
+            <img src="images/works/evie.jpg" alt="Evie">
+          </div>
+          
+          <div class="card">
+            <div class="card--content divcol center">
+              <h3>Free Horses</h3>
+              <div class="center" style="gap: 2em">
+                <a href="https://github.com/dvconsultores/free_horses_front" target="_blank" class="github center" style="gap: 2px">
+                  <iconify-icon icon="mdi:github" style="font-size: 30px"></iconify-icon>
+                  <span>Github</span>
+                </a>
+                <a href="https://www.freehorses.io/#/" target="_blank" class="demo btn center">en vivo</a>
+              </div>
+            </div>
+            <img src="images/works/free-horses.jpg" alt="Free Horses">
+          </div>
+          
+          <div class="card">
+            <div class="card--content divcol center">
+              <h3>Near Base</h3>
+              <div class="center" style="gap: 2em">
+                <a href="https://github.com/nearbaseio/frontend" target="_blank" class="github center" style="gap: 2px">
+                  <iconify-icon icon="mdi:github" style="font-size: 30px"></iconify-icon>
+                  <span>Github</span>
+                </a>
+                <a href="http://157.230.2.213/near-base.io/#/" target="_blank" class="demo btn center">en vivo</a>
+              </div>
+            </div>
+            <img src="images/works/near-base.jpg" alt="Near Base">
+          </div>
+          
+          <div class="card">
+            <div class="card--content divcol center">
+              <h3>Mintick</h3>
+              <div class="center" style="gap: 2em">
+                <a href="https://github.com/dvconsultores/mintick_front" target="_blank" class="github center" style="gap: 2px">
+                  <iconify-icon icon="mdi:github" style="font-size: 30px"></iconify-icon>
+                  <span>Github</span>
+                </a>
+                <a href="https://www.mintickt.com" target="_blank" class="demo btn center">en vivo</a>
+              </div>
+            </div>
+            <img src="images/works/mintick.jpg" alt="Mintick">
+          </div>
+          
+          <div class="card">
+            <div class="card--content divcol center">
+              <h3>Home Delivery</h3>
+              <div class="center" style="gap: 2em">
+                <a href="https://github.com/dvconsultores/homedelivery_front" target="_blank" class="github center" style="gap: 2px">
+                  <iconify-icon icon="mdi:github" style="font-size: 30px"></iconify-icon>
+                  <span>Github</span>
+                </a>
+                <a class="demo btn center" style="pointer-events: none">no disponible aún</a>
+              </div>
+            </div>
+            <img src="images/works/home-delivery.jpg" alt="Home Delivery">
+          </div>
+          
+          <div class="card">
+            <div class="card--content divcol center">
+              <h3>Artemis</h3>
+              <div class="center" style="gap: 2em">
+                <a href="https://github.com/dvconsultores/artemis_front" target="_blank" class="github center" style="gap: 2px">
+                  <iconify-icon icon="mdi:github" style="font-size: 30px"></iconify-icon>
+                  <span>Github</span>
+                </a>
+                <a href="https://www.artemis-edu.com/#/" target="_blank" class="demo btn center">en vivo</a>
+              </div>
+            </div>
+            <img src="images/works/artemis.jpg" alt="Artemis">
+          </div>
+          
+          <div class="card">
+            <div class="card--content divcol center">
+              <h3>defix3</h3>
+              <div class="center" style="gap: 2em">
+                <a href="https://github.com/dvconsultores/defiX3-Dapp" target="_blank" class="github center" style="gap: 2px">
+                  <iconify-icon icon="mdi:github" style="font-size: 30px"></iconify-icon>
+                  <span>Github</span>
+                </a>
+                <a href="https://app.defix3.com/#/" target="_blank" class="demo btn center">en vivo</a>
+              </div>
+            </div>
+            <img src="images/works/defix.jpg" alt="defix3">
+          </div>
+
+          <div class="card">
+            <div class="card--content divcol center">
+              <h3>Raikumo</h3>
+              <div class="center" style="gap: 2em">
+                <a href="https://github.com/dvconsultores/Raikumo" target="_blank" class="github center" style="gap: 2px">
+                  <iconify-icon icon="mdi:github" style="font-size: 30px"></iconify-icon>
+                  <span>Github</span>
+                </a>
+                <a href="http://157.230.2.213/raikumo/#/" target="_blank" class="demo btn center">en vivo</a>
+              </div>
+            </div>
+            <img src="images/works/raikumo.jpg" alt="Raikumo">
+          </div>
+        </section>
+      </section>
+
+      <div id="footer" class="divcol">
+        <section id="contact" data-type="contact" class="footer--content">
+          <div id="container-logo" class="divcol center">
+            <img src="images/logos/herian - logo texto footer.png" alt="logo herian" style="width: 300px">
+            <!-- <img src="images/logos/herian - logotipo.svg" alt="logo herian">
+            <h5>Herian Palencia</h5>
+            <h6>Desarrollador Front-End</h6> -->
+          </div>
+
+          <div class="container-social">
+            <a href="https://github.com/detextre4" target="_blank" class="mdi">
+              <iconify-icon icon="mdi:github" style="font-size: 30px"></iconify-icon>
+              <span class="mditext d_nonemobile">github: detextre4</span>
+            </a>
+            <a href="https://discord.gg/fkt4zGpXVQ" target="_blank" class="mdi mdi-discord">
+              <span class="mditext d_nonemobile">discord: Alessandro16#7464</span>
+            </a>
+            <a href="https://t.me/herian_consultas" target="_blank" class="mdi mdi-telegram">
+              <span class="mditext d_nonemobile">telegram: detextre4@gmail.com</span>
+            </a>
+            <a href="https://www.instagram.com/detextre4/" target="_blank" class="mdi mdi-instagram">
+              <span class="mditext d_nonemobile">instagram: detextre4</span>
+            </a>
+            <a href="https://www.linkedin.com/in/herian-palencia-523018232" target="_blank" class="mdi mdi-linkedin">
+              <span class="mditext d_nonemobile">linkedIn: Herian Palencia</span>
+            </a>
+          </div>
+        </section>
+        <span id="copyright">&copy; 2022 Herian Palencia. Todos los Derechos Reservados.</span>
+      </div>
+    </div>
+    
+    <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
+    <script src="scripts/listener.js" defer></script>
+  </body>
+</html>

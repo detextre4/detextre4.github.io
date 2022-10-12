@@ -1,0 +1,46 @@
+/* about */
+#about {
+  padding-block: 4em;
+  perspective: 38em;
+  background-color: var(--primary);
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+}
+#about--wrapper {
+  --fb: 500px;
+  width: 100%;
+  max-width: var(--parent);
+  margin-inline: auto;
+  padding-inline: var(--margin-global);
+  flex-wrap: wrap;
+}
+#about--wrapper > * {flex: 1 1 var(--fb)}
+#about h1 {
+  --fs: clamp(1.8em, 2vw, 2em);
+  --h-line: 8px !important;
+}
+#about p {
+  --fs: 1.1em;
+}
+#about p b,
+#about p a {
+  font-family: var(--font2);
+}
+
+#about .card {
+  max-width: var(--fb) !important;
+  transform: rotateY(1deg);
+}
+
+#about .card::before {
+  --translate: -1.5625em;
+  background-color: var(--bg-back);
+  transform: translate(var(--translate), var(--translate));
+  box-shadow: none !important;
+}
+
+#about--content {
+  flex: 1 1 var(--fb);
+  padding: clamp(1em, 3vw, 3em);
+  box-shadow: 0 0 3px 1px var(--accent);
+}

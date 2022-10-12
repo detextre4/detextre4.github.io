@@ -1,0 +1,132 @@
+/* tools */
+#tools {
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+  background-color: #fff;
+  padding: 4em;
+  --c: #000;
+  perspective: 35em;
+}
+@media (max-width:500px) {
+  #tools {font-size: clamp(12px, 2vw, 14px)}
+}
+#tools h3 {
+  background-color: #f4fbfe;
+  border-radius: .25em;
+  padding: .3em;
+}
+
+#tools #container-tools {
+  --icon-size: 5em;
+  --w: 100vw;
+  --br: 1px 10px 10px 1px;
+  --bs: none;
+  /* --bg-front: rgba(0, 0, 0, .9); */
+  --bg-front: hsl(0, 63%, 41%, .8);
+  gap:2em;
+  margin-inline: calc(50% - 50vw);
+  padding-inline: clamp(2em, 8vw, 8.25em);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  transform: rotateY(4deg);
+}
+@media (max-width: 934px) {
+  #tools #container-tools {
+    flex-direction: column;
+    justify-content: center !important
+  }
+}
+#tools #container-tools img  {width: 100%}
+#tools .separator-line {
+  width: clamp(5em, 20vw, 20em);
+  height: 4px;
+  background-color: var(--primary);
+  transform: scaleX(0);
+  animation: arrow-effect 3s infinite;
+}
+@media (max-width: 934px) {
+  #tools .separator-line {display: none !important}
+}
+@keyframes arrow-effect {
+  0% {
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+  39% {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  40% {
+    transform-origin: right;
+    transform: scaleX(1);
+  }
+  80% {
+    transform-origin: right;
+    transform: scaleX(0);
+  }
+}
+
+#tools #container-design  {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+#tools #container-design a {
+  width: var(--icon-size);
+  animation: bounding-move 5s infinite linear alternate;
+  animation-delay: var(--delay);
+}
+@keyframes bounding-move {
+  0% {
+    transform: translateY(0%);
+  }
+  20% {
+    rotate: 10deg;
+  }
+  50% {
+    transform: translateY(20%);
+  }
+  60% {
+    rotate: -10deg;
+  }
+  100% {
+    transform: translateY(-20%);
+  }
+}
+
+#tools #container-code  {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+@media (max-width: 934px) {
+  #tools #container-code  {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #tools #container-code > div {display: contents}
+  #tools #container-code > a  {order: 1}
+  #tools #container-code > div > a:first-of-type {order: 0}
+  #tools #container-code > div > a:last-of-type {order: 2}
+}
+
+#tools #container-code > a  {
+  width: calc(var(--icon-size) * 1.8);
+  animation: bounding-scale 3s ease infinite alternate;
+  animation-delay: var(--delay);
+}
+#tools #container-code > div > a {
+  width: var(--icon-size);
+  animation: bounding-scale 3s ease infinite alternate;
+  animation-delay: var(--delay);
+}
+
+@keyframes bounding-scale {
+  100% {
+    transform: scale(1.1);
+  }
+}

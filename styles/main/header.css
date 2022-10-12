@@ -1,0 +1,40 @@
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 10px;
+  right: 0;
+  left: 0;
+  margin: auto;
+
+  padding: 2em clamp(1em, 4vw, 4em);
+  isolation: isolate;
+}
+#header img {width: 15.625em}
+
+#header #traduction {
+  --bs: none !important;
+  border-radius: 5px !important;
+  text-transform: uppercase;
+  position: relative;
+  mix-blend-mode: lighten;
+  
+  transition: .5s var(--ease-return);
+}
+
+#header #traduction::before {
+  --bg: var(--primary);
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #928e8d;
+  border: var(--b);
+  padding: var(--p);
+  z-index: -1;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: .5s var(--ease-return);
+}
+#header #traduction:active {--bs: inset 0 6px 2px 0 rgb(255, 255, 255, .2)}
+#header #traduction:hover::before {transform: scaleX(1)}

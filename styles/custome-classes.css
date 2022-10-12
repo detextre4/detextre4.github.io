@@ -1,0 +1,135 @@
+/* hover */
+.hover_line {
+  position: relative;
+}
+.hover_line::before {
+  content: "";
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  margin: auto !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: var(--active) !important;
+  opacity: 0 !important;
+  border-radius: 50px !important;
+  transform: scaleX(0.2) !important;
+  transform-origin: left !important;
+  transition: 250ms var(--ease-return) !important;
+}
+.hover_line:is(:hover, :focus):before {
+  opacity: 0.2 !important;
+  transform: scaleX(1) !important;
+}
+
+/* invert */
+.inv {
+  filter: invert(100%);
+}
+
+/* cards */
+.card {
+  --w: initial;
+  --h: initial;
+  --x: 0;
+  --y: 0;
+  --blur: 0;
+  --size: 4px;
+  --p: 2em;
+  --rotate: 0;
+  --br: 1px;
+  --bs: var(--x) var(--y) var(--blur) var(--size) var(--bg-back);
+  --bg-front: var(--primary);
+  --bg-back: var(--secondary);
+
+  isolation: isolate;
+  position: relative;
+  padding: var(--p);
+  width: var(--w);
+  height: var(--h);
+  border-radius: var(--br);
+}
+.card:not(.not_pseudo):before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--bg-back);
+  transform: rotate(calc(var(--rotate) * 1deg));
+  box-shadow: var(--bs);
+  z-index: -1;
+  border-radius: inherit;
+}
+.card:not(.not_pseudo):after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--bg-front);
+  z-index: -1;
+  border-radius: inherit;
+}
+
+/* buttons */
+.btn {
+  --w: initial;
+  --h: 40px;
+  --p: 0 1em;
+  --bg: var(--accent);
+  --bs: 1px 1px 4px 1px rgba(0, 0, 0, .2);
+  --c: var(--secondary);
+  --fw: 600;
+  --fs: 1em;
+  --b: none;
+
+  background-color: var(--bg);
+  box-shadow: var(--bs);
+  border: var(--b);
+  color: var(--c);
+  font-size: var(--fs);
+  font-weight: var(--fw);
+  padding: var(--p);
+  width: var(--w);
+  height: var(--h);
+}
+
+/* text */
+.light {font-weight: lighter !important}
+.normal {font-weight: normal !important}
+.bold {font-weight: bold !important}
+.bolder {font-weight: bolder !important}
+.tcap {text-transform: capitalize}
+.tup {text-transform: uppercase}
+.tlow {text-transform: lowercase}
+.tcenter {text-align: center}
+
+/* box */
+.align {margin-inline: auto}
+.alignl {margin-right: auto}
+.alignr {margin-left: auto}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divcol {
+  display: flex;
+  flex-direction: column;
+}
+.divcol_inv {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.divrow {
+  display: flex;
+  flex-direction: row;
+}
+.divrow_reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 880px) {
+  .d_nonemobile {display: none !important}
+}
